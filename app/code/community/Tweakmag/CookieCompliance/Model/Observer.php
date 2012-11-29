@@ -25,7 +25,7 @@ class Tweakmag_CookieCompliance_Model_Observer
     /**
      * Deletes 'frontend' cookie if cookies have not been allowed by the user
      */
-    public function cookieComplianceCheck($observer)
+    public function cookieComplianceCheck()
     {
 
         if (!$this->_cookiesAllowed && $this->_isEnabled && $this->_shouldDeleteCookies) {
@@ -37,7 +37,7 @@ class Tweakmag_CookieCompliance_Model_Observer
      * Adds an additional layout handle
      * if cookies have not been allowed by the user
      */
-    public function addHandles($observer)
+    public function addHandles()
     {
         if (!$this->_cookiesAllowed && $this->_isEnabled && $this->_shouldDeleteCookies) {
             $update = Mage::getSingleton('core/layout')->getUpdate();

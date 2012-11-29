@@ -18,7 +18,7 @@ class Tweakmag_CookieCompliance_Helper_Data extends Mage_Core_Helper_Abstract
      * Check if cookie compliance is needed
      * @return boolean
      */
-    static public function isCookieComplianceNeeded()
+    public function isCookieComplianceNeeded()
     {
         $isEnabled = self::isEnabled();
         if ($isEnabled) {
