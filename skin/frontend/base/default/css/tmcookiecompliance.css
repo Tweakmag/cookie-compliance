@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+/*	
+=== === === === === === === === === === === === === === === === === ===
+	Tweakmag CookieCompliance
+	@category	Tweakmag
+	@package	Tweakmag_CookieCompliance
+	@copyright	Copyright (c) 2012 Tweakmag (http://www.tweakmag.com)
+	@author		Adam Martin (adam.martin@tweakmag.com) 
+=== === === === === === === === === === === === === === === === === ===
+ */
+
+#cookie-compliance-notice {
+    background: #FDFAA4;
+    border-bottom: 1px solid #988753;
+    padding: 10px;
+    text-align: center;
+}
+
+#cookie-compliance-notice a,
+#cookie-compliance-notice p {
+    display: block;
+    margin: 0.25em 0;
+    padding: 0;
+}

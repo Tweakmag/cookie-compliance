@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config>
+<!-- 
+	Tweakmag CookieCompliance
+	@category	Tweakmag
+	@package	Tweakmag_CookieCompliance
+	@copyright	Copyright (c) 2012 Tweakmag (http://www.tweakmag.com)
+	@author		Adam Martin (adam.martin@tweakmag.com)
+ -->
+<config>
+    <modules>
+        <Tweakmag_CookieCompliance>
+            <version>1.0.0.0</version>
+        </Tweakmag_CookieCompliance>
+    </modules>
+    <global>
+        <blocks>
+            <tmcc>
+                <class>Tweakmag_CookieCompliance_Block</class>
+            </tmcc>
+            <googleanalytics>
+                <rewrite>
+                    <ga>Tweakmag_CookieCompliance_Block_GoogleAnalytics_Ga</ga>
+                </rewrite>
+            </googleanalytics>
+        </blocks>
+        <events>
+            <controller_action_layout_load_before>
+                <observers>
+                    <cookieComplianceHandles>
+                        <class>tmcc/observer</class>
+                        <method>addHandles</method>
+                    </cookieComplianceHandles>
+                </observers>
+            </controller_action_layout_load_before>
+            <controller_front_send_response_after>
+                <observers>
+                    <cookieComplianceCheck>
+                        <class>tmcc/observer</class>
+                        <method>cookieComplianceCheck</method>
+                    </cookieComplianceCheck>
+                </observers>
+            </controller_front_send_response_after>
+        </events>
+        <helpers>
+            <tmcc>
+                <class>Tweakmag_CookieCompliance_Helper</class>
+            </tmcc>
+        </helpers>
+        <models>
+            <tmcc>
+                <class>Tweakmag_CookieCompliance_Model</class>
+            </tmcc>
+        </models>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <Tweakmag_CookieCompliance translate="title">
+                            <title>Tweakmag CookieCompliance Module</title>
+                            <sort_order>10</sort_order>
+                        </Tweakmag_CookieCompliance>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <tmcc translate="title">
+                                            <title>Tweakmag CookieCompliance Section</title>
+                                            <sort_order>10</sort_order>
+                                        </tmcc>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <translate>
+            <modules>
+                <Tweakmag_CookieCompliance>
+                    <files>
+                        <default>Tweakmag_CookieCompliance.csv</default>
+                    </files>
+                </Tweakmag_CookieCompliance>
+            </modules>
+        </translate>
+    </adminhtml>
+    <frontend>
+        <layout>
+            <updates>
+                <tmcookiecompliance>
+                    <file>tmcookiecompliance.xml</file>
+                </tmcookiecompliance>
+            </updates>
+        </layout>
+        <routers>
+            <tmcookiecompliance>
+                <use>standard</use>
+                <args>
+                    <module>Tweakmag_CookieCompliance</module>
+                    <frontName>tmcc</frontName>
+                </args>
+            </tmcookiecompliance>
+        </routers>
+        <translate>
+            <modules>
+                <Tweakmag_CookieCompliance>
+                    <files>
+                        <default>Tweakmag_CookieCompliance.csv</default>
+                    </files>
+                </Tweakmag_CookieCompliance>
+            </modules>
+        </translate>
+    </frontend>
+    <default>
+        <tmcc>
+            <configuration>
+                <text><![CDATA[<p>Our websites uses cookies, some of which are essential for parts of the site to operate and have already been set.</p><p>You can delete and block these cookies in your browser, but parts of our website may not work.</p>]]></text>
+                <linktext><![CDATA[Learn more about the cookies we use and how to manage them here.]]></linktext>
+                <formtext><![CDATA[Please tick this box {checkbox} and click {button} to accept cookies from this site and remove this message.]]></formtext>
+                <cookiecontrol>2</cookiecontrol>
+            </configuration>
+        </tmcc>
+    </default>
+</config>

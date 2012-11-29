@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config>
+<!-- 
+	Tweakmag Cookie Compliance
+	@category	Tweakmag
+	@package	Tweakmag_CookieCompliance
+	@copyright	Copyright (c) 2012 Tweakmag (http://www.tweakmag.com)
+	@author		Adam Martin (adam.martin@tweakmag.com)
+ -->
+<config>
+    <modules>
+        <Tweakmag_CookieCompliance>
+            <codePool>community</codePool>
+            <active>true</active>
+            <depends>
+                <Mage_Page/>
+            </depends>
+        </Tweakmag_CookieCompliance>
+    </modules>
+</config>

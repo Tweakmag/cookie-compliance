@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE layout>
+<!--
+/**
+ * Tweakmag Cookie Compliance
+ *
+ * @category   Tweakmag
+ * @package    Tweakmag_CookieCompliance
+ * @copyright  Copyright (c) 2012 Tweakmag (http://www.tweakmag.com)
+ * @author	   Adam Martin (amartin@tweakmag.com)
+ * @license    Commercial
+ */
+ -->
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/tmcookiecompliance.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="root">
+            <block type="tmcc/notices" name="global_notices" as="global_notices"
+                   template="tweakmag/cookiecompliance/notices.phtml"/>
+        </reference>
+    </default>
+
+    <customer_account_login>
+        <reference name="content">
+            <block type="core/template" name="cookiecompliance_message"
+                   template="tweakmag/cookiecompliance/message.phtml" before="customer_form_login">
+                <action method="setMsg" translate="msg" module="tmcc">
+                    <msg>Sorry, you won't be able to login without allowing cookies.</msg>
+                </action>
+            </block>
+        </reference>
+    </customer_account_login>
+
+    <catalog_product_view>
+        <reference name="content">
+            <block type="core/template" name="cookiecompliance_message"
+                   template="tweakmag/cookiecompliance/message.phtml" before="customer_form_login">
+                <action method="setMsg" translate="msg" module="tmcc">
+                    <msg>Sorry, you won't be able to purchase any products until you allow cookies.</msg>
+                </action>
+            </block>
+        </reference>
+    </catalog_product_view>
+
+    <catalog_category_layered>
+        <reference name="content">
+            <block type="core/template" name="cookiecompliance_message"
+                   template="tweakmag/cookiecompliance/message.phtml" before="customer_form_login">
+                <action method="setMsg" translate="msg" module="tmcc">
+                    <msg>Sorry, you won't be able to purchase any products until you allow cookies.</msg>
+                </action>
+            </block>
+        </reference>
+    </catalog_category_layered>
+
+    <catalog_category_default>
+        <reference name="content">
+            <block type="core/template" name="cookiecompliance_message"
+                   template="tweakmag/cookiecompliance/message.phtml" before="customer_form_login">
+                <action method="setMsg" translate="msg" module="tmcc">
+                    <msg>Sorry, you won't be able to purchase any products until you allow cookies.</msg>
+                </action>
+            </block>
+        </reference>
+    </catalog_category_default>
+</layout>

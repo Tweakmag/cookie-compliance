@@ -1,0 +1,21 @@
+<?php
+/**
+ * Tweakmag CookieCompliance
+ *
+ * @category   Tweakmag
+ * @package    Tweakmag_CookieCompliance
+ * @copyright  Copyright (c) 2012 Tweakmag (http://www.tweakmag.com)
+ * @author       Adam Martin (amartin@tweakmag.com)
+ * @license    Commercial
+ */
+?>
+
+<?php if (Mage::helper('tmcc')->isCookieComplianceNeeded() && Mage::helper('tmcc')->shouldDeleteCookies()): ?>
+<ul class="messages">
+    <li class="error-msg">
+        <ul>
+            <li><?php echo Mage::helper('tmcc')->__($this->getMsg()); ?></li>
+        </ul>
+    </li>
+</ul>
+<?php endif;

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config>
+<!-- 
+	Tweakmag CookieCompliance
+	@category	Tweakmag
+	@package	Tweakmag_CookieCompliance
+	@copyright	Copyright (c) 2012 Tweakmag (http://www.tweakmag.com)
+	@author		Adam Martin (adam.martin@tweakmag.com)
+ -->
+<config>
+    <tabs>
+        <tweakmag>
+            <label>Tweakmag</label>
+            <sort_order>400</sort_order>
+        </tweakmag>
+    </tabs>
+    <sections>
+        <tmcc>
+            <class>separator-top</class>
+            <label>Cookie Compliance</label>
+            <tab>tweakmag</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>110</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <supportinfo>
+                    <label>Support Information</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment><![CDATA[
+						<div class="box">
+							<p class="grand-total"><b>Support Options</b></p>
+							If you need support for this extension please visit our dedicated page at <a href="http://www.tweakmag.com/store/extensions/tweakmag-cookiecompliance">http://www.tweakmag.com/store/extensions/tweakmag-cookiecompliance</a>.<br />If you are having problems
+							with this extension or would like it to be customised then please contact us:
+							<ul class="tweakmag-support">
+								<li class="email"><a href="mailto:support@tweakmag.com">support@tweakmag.com</a><br />
+								<li class="website"><a href="http://www.tweakmag.com">www.tweakmag.com</a><br />
+							</ul>
+						</div>]]>
+                    </comment>
+                </supportinfo>
+                <configuration>
+                    <label>Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled>
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <remembercookie>
+                            <label>Remember Users Choice</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>If you choose yes, the user won't be asked to allow cookies again until they clear their cookies.</comment>
+                        </remembercookie>
+                        <cookiecontrol>
+                            <label>Cookie Management</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tmcc/source_cookiemanagement</source_model>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cookiecontrol>
+                        <text>
+                            <label>Cookie Compliance Message</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text>
+                        <linktext>
+                            <label>Link Text</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </linktext>
+                        <formtext>
+                            <label>Form Text</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </formtext>
+                    </fields>
+                </configuration>
+            </groups>
+        </tmcc>
+    </sections>
+</config>

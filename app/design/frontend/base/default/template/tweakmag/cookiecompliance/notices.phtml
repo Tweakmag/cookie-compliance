@@ -1,0 +1,37 @@
+<?php
+/**
+ * Tweakmag CookieCompliance
+ *
+ * @category   Tweakmag
+ * @package    Tweakmag_CookieCompliance
+ * @copyright  Copyright (c) 2012 Tweakmag (http://www.tweakmag.com)
+ * @author       Adam Martin (amartin@tweakmag.com)
+ * @license    Commercial
+ */
+?>
+
+<?php if ($this->displayNoscriptNotice()): ?>
+<noscript>
+    <div class="noscript">
+        <div class="noscript-inner">
+            <p><strong><?php echo $this->__('JavaScript seems to be disabled in your browser.'); ?></strong></p>
+
+            <p><?php echo $this->__('You must have JavaScript enabled in your browser to utilize the functionality of this website.'); ?></p>
+        </div>
+    </div>
+</noscript>
+<?php endif; ?>
+<?php if ($this->displayDemoNotice()): ?>
+<p class="demo-notice"><?php echo $this->__('This is a demo store. Any orders placed through this store will not be honored or fulfilled.') ?></p>
+<?php endif; ?>
+
+<?php if (Mage::helper('tmcc')->isCookieComplianceNeeded()): ?>
+<div id="cookie-compliance-notice">
+    <?php echo $this->getNoticeContent() ?>
+    <?php echo $this->getLinkToCookieInfo() ?>
+    <form action="<?php echo $this->getUrl('tmcc/cookiecompliance/setcookie') ?>" method="POST">
+        <input type="hidden" id="referer" name="referer" value="<?php echo $this->getUrlForReferer()?>"/>
+        <?php echo $this->getForm() ?>
+    </form>
+</div>
+<?php endif;

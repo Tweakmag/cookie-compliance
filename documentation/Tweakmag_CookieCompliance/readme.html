@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Tweakmag - Cookie Compliance</title>
+    <style type="text/css">
+        body {
+            background: #FFF2F9;
+            margin: 10px;
+            font-family: Calibri,Tahoma,Arial,Verdana,Helvetica,sans-serif;
+        }
+        table {
+            margin-bottom: 1em;
+        }
+        #wrapper {
+            background: #fff;
+            border: 1px solid #D9D9D9;
+            padding: 10px;
+            margin: 0 auto;
+            width: 960px;
+        }
+        #footer {
+            margin: 0 auto;
+            width: 960px;
+        }
+        #footer p {
+            color: #999;
+            font-size: 12px;
+            margin-top: 3px;
+            text-align: center;
+        }
+        #toc {
+            border-bottom: 1px solid #D9D9D9;
+            padding-bottom: 0.5em;
+        }
+        h1, h2, h3 { color: #DC007A; margin-top: 0}
+
+        li em {
+            text-decoration: underline;
+        }
+        code {
+            display: block;
+            background: #F9F9F9;
+            border: 1px dashed #D9D9D9;
+            padding: 5px;
+            margin-bottom: 1em;
+        }
+        table {
+            border-collapse: collapse;
+            border: 1px solid #D9D9D9;
+        }
+        td, th {
+            border: 1px solid #D9D9D9;
+            padding: 3px 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <h1>Tweakmag Cookie Compliance</h1>
+    <ol id="toc">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#installation">Installation</a>
+            <ol>
+                <li>Backup Your Data</li>
+                <li>Extract Files</li>
+                <li>Upload Files</li>
+            </ol>
+        </li>
+        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#uninstall">Uninstall</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+    </ol>
+    <h3 id="overview">Overview</h3>
+    <p>The Tweakmag Dynamic Content extension enhances the default Magento product functionality by allowing you to
+    tags in the form of <strong>{tag}</strong> which gets replaced automatically with the products data. For example, by adding
+    <strong>{name}</strong> in the meta description field will get replaced with the actual product name automatically.</p>
+    <p>You can add tags to the following:</p>
+    <ul>
+        <li>Product Meta Title *</li>
+        <li>Product Meta Keywords *</li>
+        <li>Product Meta Description *</li>
+        <li>Product Description</li>
+
+    </ul>
+    <p>For the items marked with an * above you can set a template that will be used for all products (but still override at
+        the product level). Please read the <em>Configuration Section</em> below to learn how to do this.</p>
+    <h3 id="features">Features</h3>
+    <ul>
+        <li>100% open source.</li>
+        <li>Lifetime free upgrades.</li>
+    </ul>
+    <h3 id="installation">Installation</h3>
+    <ol>
+        <li><em>Backup Your Data:</em> Please backup your database and web files before continuing.</li>
+        <li><em>Extract Files:</em></li>
+        <li><em>Upload Files:</em></li>
+    </ol>
+    <h3 id="configuration">Configuration</h3>
+    <p>It is advised that you first set up the default templates that will apply for all products that do not have specific
+    content provided. The following templates are supported:</p>
+    <ul>
+        <li><em>Default Title:</em> System > Confguration > General > Design > HTML Head</li>
+        <li><em>Default Meta Description:</em> System > Confguration > General > Design > HTML Head</li>
+        <li><em>Default Meta Keywords:</em> System > Confguration > General > Design > HTML Head</li>
+    </ul>
+    <p>To set up the <em>Default Meta Description</em> for example you could enter something like:</p>
+    <code>The {color} {name} from {manufacturer} is only {price}</code>
+    <p>And it will automatically pull in the product information, for the example the above might look like:</p>
+    <code>The red Leather Handbag from Guicci is only $450.00</code>
+    <p>These templates can be configured for each website and/or store views you have setup as well. You will usually only
+    need to do this if you have different languages.</p>
+    <p>For an individual product you can apply the same logic as above to override the default templates with even more specific
+    dynamic content.</p>
+    <p>The tags you can use is only limited to what attributes are available to the product including all
+    the attributes you create yourself. The tags are the same as the attribute code which you can view by navigating to:</p>
+    <code>Catalog > Attributes > Manage Attributes</code>
+    <h3 id="uninstall">Uninstall</h3>
+    <p></p>
+    <h3 id="troubleshooting">Troubleshooting</h3>
+</div>
+<div id="footer">
+    <p>&copy 2012 Tweakmag Ltd - www.tweakmag.com</p>
+</div>
+</body>
+</html>
